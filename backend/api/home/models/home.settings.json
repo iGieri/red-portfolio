@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "Home",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Home": {
+      "type": "dynamiczone",
+      "components": [
+        "home.first-section",
+        "home.about-me",
+        "home.what-can-i-do",
+        "home.cv",
+        "home.my-work"
+      ],
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.container {
+    background-size: cover;
+    background-position: center;
+    border-radius: 62px;
+    width: 40vh;
+    height: 60vh;
+    color: #fff;
+    display: inline-block;
+    margin: 0 10vh;
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    border-radius: 62px;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(228,25,55,1) 100%);
+    opacity: 0;
+    transition: .2s all;
+    margin-top: -60.5%;
+    vertical-align: middle;
+    z-index: 2;
+}
+
+.gradient:hover {
+    opacity: 1;
+}
+
+.lang {
+    opacity: 0;
+    transition: .4s all;
+    font-size: 1.2rem;
+    
+    text-shadow: 2px 2px rgba(0,0,0,.3);
+}
+
+.title {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    padding-top: 50%;
+    transition: .2s all;
+    z-index: 1;
+}
+
+
+.title2  {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 50%;
+    transition: .2s all;
+}
+
+.container:hover .title {
+    transform: translateY(-6rem);
+}
+
+.gradient:hover .title2 {
+    transform: translateY(-6rem);
+}
+
+.gradient:hover .lang {
+    opacity: 1;
+}
+
+.languages {
+    padding-top: 50%;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

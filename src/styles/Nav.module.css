@@ -1,0 +1,77 @@
+.img_container {
+    display: inline-block;
+}
+
+.img {
+    width: 5rem;
+}
+
+.container {
+
+}
+
+.title {
+    display: inline-block;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.3rem;
+    position: relative;
+    top: 3px;
+}
+
+.button {
+    display: inline-block;
+    margin-left: 60%;
+    position: relative;
+    top: 3px;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    .button {
+        margin-left: 45%;
+    }
+}
+
+/* Pixel 2 */
+@media (max-width: 420px) {
+    .img {
+        width: 4rem;
+    }
+    
+    .title {
+        display: inline-block;
+        font-family: "Kanit", sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        position: relative;
+        top: 3px;
+    }
+
+    .button {
+        font-size: .7rem !important;
+        margin-left: 25%;
+    }
+}
+
+/* Moto G2 */
+@media (max-width: 360px) {
+    .button {
+        margin-left: 14%;
+    }
+}
+
+/* iPhone 8 */
+@media (max-width: 375px) {
+    .button {
+        margin-left: 15%;
+    }
+}
+
+
+/* iPhone SE */
+@media (max-width: 320px) {
+    .button {
+        margin-left: 5%;
+    }
+}

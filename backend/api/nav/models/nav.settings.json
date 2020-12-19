@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "navs",
+  "info": {
+    "name": "Nav"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

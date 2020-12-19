@@ -1,0 +1,26 @@
+{
+  "collectionName": "first_section",
+  "info": {
+    "name": "First Section",
+    "icon": "hands-helping"
+  },
+  "options": {},
+  "attributes": {
+    "ProfilePic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

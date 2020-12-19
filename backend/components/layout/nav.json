@@ -1,0 +1,27 @@
+{
+  "collectionName": "nav",
+  "info": {
+    "name": "Nav",
+    "icon": "arrow-alt-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Button": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "line-thin",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "portfolio",
+            "database": "portfolio",
+            "username": "postgres",
+            "password": "asd"
+        }
+    ]
+}

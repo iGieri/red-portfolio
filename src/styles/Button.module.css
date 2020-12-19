@@ -1,0 +1,14 @@
+.container {
+    display: inline-block;
+    color: #E41937;
+    border: 2px solid #E41937;
+    border-radius: 200px;
+    padding: .3rem 1rem;
+    transition: .2s;
+}
+
+.container:hover {
+    background-color: #E41937;
+    color: #ffffff;
+
+}

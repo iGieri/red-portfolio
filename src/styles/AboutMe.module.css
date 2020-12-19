@@ -1,0 +1,60 @@
+.container {
+    background-color: #E41937;
+    color: #ffffff;
+    clip-path: polygon(0 0, 45% 0, 55% 10%, 100% 10%, 100% 100%, 55% 100%, 45% 90%, 0 90%);
+    
+}
+
+.left {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.7rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.right {
+    text-align: center;
+}
+
+.img {
+    width: 20rem;
+    border-radius: 200px;
+}
+
+.img_container {
+    padding: 20vh 0;
+}
+
+.description {
+    margin: 0 10rem;    
+}
+
+@media (max-width: 1024px) {
+    .container {
+        clip-path: polygon(0 0, 45% 0, 55% 5%, 100% 5%, 100% 100%, 55% 100%, 45% 95%, 0 95%);
+        
+    }
+
+    .description {
+        margin: 0;    
+    }
+}
+
+
+@media (max-width: 420px) {
+    .container {
+        clip-path: none;
+    }   
+}
+
+@media (max-width: 320px) {
+    .img {
+        width: 15rem;
+        border-radius: 200px;
+    }
+
+    
+}

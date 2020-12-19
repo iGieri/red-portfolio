@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_cvs",
+  "info": {
+    "name": "CV",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "italian_link": {
+      "type": "string",
+      "required": true
+    },
+    "english_link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+    margin: 20vh 0;
+    text-align: center;
+    
+}
+
+.containerBoot {
+    background-color: #E41937;
+    border-radius: 32px;
+    color: white;
+    width: 120vh;
+    display: inline-block;
+}
+
+.title {
+    
+    font-size: 1.7rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.description {
+    padding-bottom: 3rem;
+}
+
+.buttons {
+    padding-bottom: 3.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    color: white !important;
+    border-width: 3px;
+    padding: .3rem 2rem;
+    border-color: #A41228;
+    margin: 0 .5rem;    
+}
+
+.button:hover {
+    background-color: #A41228;
+}
+
+@media (max-width: 1024px) {
+    .containerBoot {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .description {
+        padding-left: .3rem;
+        padding-right: .3rem;
+    }
+}
