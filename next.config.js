@@ -1,5 +1,5 @@
 module.exports = {
     env: {
-        backend: "backend-federicogerardi.herokuapp.com"
+        backend: "https://backend-federicogerardi.herokuapp.com"
     }
 }
