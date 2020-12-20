@@ -16,15 +16,15 @@ export default function Home({ data }) {
   const skills = []
 
   data.data.home.Home[2].skills.forEach(skill => {
-    skills.push({title: skill.Title, img: "http://localhost:8000" + skill.Image.url, languages: skill.Languages.lang})
+    skills.push({title: skill.Title, img: process.env.backend + skill.Image.url, languages: skill.Languages.lang})
   })
 
 
   return (
     <div>
-      <Nav img={"http://localhost:8000" + data.data.nav.Icon.url} title={data.data.nav.Title} button="Contact Me!" />
-      <FirstSection img={"http://localhost:8000" + data.data.home.Home[0].ProfilePic.url} title={data.data.home.Home[0].Title} description={data.data.home.Home[0].Description} />
-      <AboutMe img={"http://localhost:8000" + data.data.home.Home[1].image.url} title={data.data.home.Home[1].title} description={data.data.home.Home[1].description} />
+      <Nav img={process.env.backend + data.data.nav.Icon.url} title={data.data.nav.Title} button="Contact Me!" />
+      <FirstSection img={process.env.backend + data.data.home.Home[0].ProfilePic.url} title={data.data.home.Home[0].Title} description={data.data.home.Home[0].Description} />
+      <AboutMe img={process.env.backend + data.data.home.Home[1].image.url} title={data.data.home.Home[1].title} description={data.data.home.Home[1].description} />
       <WhatCanIDo title="What can I do?" skills={skills} />
       <CV {...data.data.home.Home[3]} />
       <MyWork {...data.data.home.Home[4]} />

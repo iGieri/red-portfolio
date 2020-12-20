@@ -23,7 +23,7 @@ export default function Footer(props) {
 
     return (
         <div className={styles.container}>
-            <div className={styles.imgContainer}><img className={styles.image} src={"http://localhost:8000" + props.favicon.url} /></div>
+            <div className={styles.imgContainer}><img className={styles.image} src={process.env.backend + props.favicon.url} /></div>
             <div className={styles.title}>{props.title}</div>
             <div className={styles.socials}>{socials}</div>
             <div className={styles.description}>{props.description}</div>
