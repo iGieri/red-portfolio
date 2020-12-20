@@ -36,7 +36,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: "http://localhost:8000/graphql",
+    uri: process.env.backend + "/graphql",
     cache: new InMemoryCache()
   })
 
