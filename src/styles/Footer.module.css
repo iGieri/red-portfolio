@@ -1,0 +1,65 @@
+.container {
+    background-color: #E41937;
+    color: white;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.image {
+    width: 10rem;
+    margin-top: 5rem;
+}
+
+.title {
+    font-size: 1.7rem;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-top: 20%;
+}
+
+.social {
+    text-align: center;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border: white 2px solid;
+    border-radius: 300px;
+    margin: 0 .5rem;
+    transition: .2s all;
+    color: white;
+    transform: scale(.8);
+}
+
+.social:hover {
+    background-color: white;
+    color: #E41937 !important;                                                                                                                                                                                                      
+}
+
+.social:hover .icon {
+    fill: #E41937 !important;
+}
+
+.socials {
+    margin: 2rem 0
+}
+
+.description {
+    font-size: 1.3rem;
+    padding-bottom: 5rem;
+}
+
+@media (max-width: 420px) {
+    .image {
+        width: 8rem;
+    }
+
+    .socials {
+        margin: 2rem 5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+}

@@ -1,20 +1,16 @@
 import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import styles from "../styles/Skill.module.css"
+import Button from "./Button"
+import styles from "../styles/Project.module.css"
 
 
 
-export default function Skill(props) {
-    const languages = []
-    props.languages.forEach(lang => {
-        languages.push(<div className={styles.lang}>{lang}</div>)
-    })
-
+export default function Project(props) {
     return (
-        <div className={styles.container} style={{backgroundImage: `url(${props.img})`}}>
+        <div className={styles.container} style={{backgroundImage: `url(${"http://localhost:8000" + props.image.url})`}}>
             <div className={styles.gradient}>
                 <div className={styles.title}>{props.title}</div>
-                <div className={styles.languages}>{languages}</div>
+                <div className={styles.date}>{props.date}</div>
+                <div className={styles.buttonContainer}><Button className={styles.button} href={props.link}>Visit Website ></Button></div>
             </div>
         </div>
     )

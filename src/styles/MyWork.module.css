@@ -1,0 +1,17 @@
+.container {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.7rem;
+    margin-bottom: 10vh;
+}
+
+.button {
+    padding: .3rem 2.5rem;
+}
+
+.buttonContainer {
+    margin-top: 3rem;
+}

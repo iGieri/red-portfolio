@@ -6,6 +6,8 @@ import FirstSection from "../components/FirstSection"
 import AboutMe from "../components/AboutMe"
 import WhatCanIDo from "../components/WhatCanIDo"
 import CV from "../components/CV"
+import MyWork from "../components/MyWork"
+import Footer from "../components/Footer"
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client"
 
 
@@ -25,6 +27,8 @@ export default function Home({ data }) {
       <AboutMe img={"http://localhost:8000" + data.data.home.Home[1].image.url} title={data.data.home.Home[1].title} description={data.data.home.Home[1].description} />
       <WhatCanIDo title="What can I do?" skills={skills} />
       <CV {...data.data.home.Home[3]} />
+      <MyWork {...data.data.home.Home[4]} />
+      <Footer {...data.data.footer} />
     </div>
   )
 }
@@ -38,11 +42,25 @@ export async function getStaticProps() {
 
   const data = await client.query({
     query: gql`
+      # Write your query or mutation here
       {
         nav {
           Title
           Icon {
             url
+          }
+        }
+
+        footer {
+          title
+          description
+          favicon {
+            url
+          }
+          socials {
+            link
+            icon
+            name
           }
         }
         
@@ -63,25 +81,34 @@ export async function getStaticProps() {
                 url
               }
             }
-
+            
             ... on ComponentHomeWhatCanIDo {
               # Title
               skills {
                 Image {
                   url
-                }
-                
+                } 
                 Title
                 Languages
               }
             }
-
-
+                  
             ... on ComponentHomeCv {
               title
               description
               italian_link
               english_link
+            }
+            
+            ... on ComponentHomeMyWork {
+              title
+              projects {
+                title
+                date
+                image {
+                  url
+                }
+              }
             }
           }
         }
