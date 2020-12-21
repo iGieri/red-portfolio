@@ -16,7 +16,8 @@
 
 .icon {
     font-size: 2rem;
-    margin-top: 20%;
+    position: relative;
+    top: 14px;
 }
 
 .social {
