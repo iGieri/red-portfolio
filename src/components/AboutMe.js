@@ -14,7 +14,7 @@ export default function AboutMe(props) {
                         <div className={styles.description}>{props.description}</div>
                     </Col>
                     <Col className={styles.right}>
-                        <div className={styles.img_container}><img className={styles.img} src={props.img} /></div>
+                        <div className={styles.img_container}><img className={styles.img} src={props.image.url} /></div>
                     </Col>
                 </Row>   
             </Container>

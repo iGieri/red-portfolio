@@ -8,7 +8,7 @@ import Skill from './Skill'
 export default function WhatCanIDo(props) {
     const skills = []
     props.skills.forEach(skill => {
-        skills.push(<Skill title={skill.title} languages={skill.languages} img={skill.img} />)
+        skills.push(<Skill title={skill.title} languages={skill.languages} img={skill.image.url} />)
     });
 
 

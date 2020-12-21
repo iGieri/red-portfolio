@@ -13,8 +13,8 @@ export default function CV(props) {
                 <div className={styles.title}>{props.title}</div>
                 <div className={styles.description}>{props.description}</div>
                 <div className={styles.buttons}> 
-                    <a href={props.italian_link}><Button className={styles.button}>Italian CV</Button></a>
-                    <a href={props.english_link}><Button className={styles.button}>English CV</Button></a>
+                    <a href={props.italianLink}><Button className={styles.button}>Italian CV</Button></a>
+                    <a href={props.englishLink}><Button className={styles.button}>English CV</Button></a>
                 </div>
             </div>
             

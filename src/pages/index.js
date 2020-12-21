@@ -8,116 +8,116 @@ import WhatCanIDo from "../components/WhatCanIDo"
 import CV from "../components/CV"
 import MyWork from "../components/MyWork"
 import Footer from "../components/Footer"
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client"
 
 
 export default function Home({ data }) {
-  console.log(data.data)
-  const skills = []
-
-  data.data.home.Home[2].skills.forEach(skill => {
-    skills.push({title: skill.Title, img: process.env.backend + skill.Image.url, languages: skill.Languages.lang})
-  })
-
-
   return (
     <div>
-      <Nav img={process.env.backend + data.data.nav.Icon.url} title={data.data.nav.Title} button="Contact Me!" />
-      <FirstSection img={process.env.backend + data.data.home.Home[0].ProfilePic.url} title={data.data.home.Home[0].Title} description={data.data.home.Home[0].Description} />
-      <AboutMe img={process.env.backend + data.data.home.Home[1].image.url} title={data.data.home.Home[1].title} description={data.data.home.Home[1].description} />
-      <WhatCanIDo title="What can I do?" skills={skills} />
-      <CV {...data.data.home.Home[3]} />
-      <MyWork {...data.data.home.Home[4]} />
+      <Nav {...data.data.nav} button="Contact me!" />
+      <FirstSection {...data.data.home.home[0]} />
+      <AboutMe {...data.data.home.home[1]} />
+      <WhatCanIDo {...data.data.home.home[2]} />
+      <CV {...data.data.home.home[3]} />
+      <MyWork {...data.data.home.home[4]} />
       <Footer {...data.data.footer} />
     </div>
   )
 }
 
 
+
+
 export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: process.env.backend + "/graphql",
-    cache: new InMemoryCache()
-  })
 
-  const data = await client.query({
-    query: gql`
-      # Write your query or mutation here
-      {
-        nav {
-          Title
-          Icon {
-            url
-          }
-        }
 
-        footer {
-          title
-          description
-          favicon {
-            url
-          }
-          socials {
-            link
-            icon
-            name
-          }
-        }
-        
-        home {
-          Home {
-            ... on ComponentHomeFirstSection {
-              Title
-              Description
-              ProfilePic {
+  const data = await fetch(
+    'https://graphql.datocms.com/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer 81c5da3ff178f4f897b924cab8ca84`,
+      },
+      body: JSON.stringify({
+        query: `
+          query data {
+            nav {
+              icon {
                 url
               }
-            }
-            
-            ... on ComponentHomeAboutMe {
               title
-              description
-              image {
-                url
-              }
             }
-            
-            ... on ComponentHomeWhatCanIDo {
-              # Title
-              skills {
-                Image {
-                  url
-                } 
-                Title
-                Languages
-              }
-            }
-                  
-            ... on ComponentHomeCv {
-              title
-              description
-              italian_link
-              english_link
-            }
-            
-            ... on ComponentHomeMyWork {
-              title
-              projects {
-                title
-                date
-                image {
-                  url
+    
+            home {
+              home {
+                ... on FirstSectionHomeRecord {
+                  image {
+                    url
+                  }
+                  title
+                  description
+                }
+                ... on AboutMeHomeRecord {
+                  image {
+                    url
+                  }
+                  title
+                  description
+                }
+                ... on WhatCanIDoHomeRecord {
+                  title
+                  skills {
+                    image {
+                      url
+                    }
+                    title
+                    languages
+                  }
+                }
+                ... on CvHomeRecord {
+                  title
+                  description
+                  italianLink
+                  englishLink
+                }
+                ... on MyWorkHomeRecord {
+                  title
+                  projects {
+                    image {
+                      url
+                    }
+                    title
+                    date
+                    link
+                  }
                 }
               }
             }
+    
+            footer {
+              icon {
+                url
+              }
+              title
+              socials {
+                icon
+                link
+              }
+              description
+            }
           }
-        }
         
-      }
-    `
-  })
+        `
+      }),
+    }
+  )
+  .then(res => res.json())
+  .catch((error) => {
+    console.log(error);
+  });
   
-
+ 
   console.log(data)
 
   return {

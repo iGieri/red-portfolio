@@ -6,7 +6,7 @@ import styles from "../styles/Skill.module.css"
 
 export default function Skill(props) {
     const languages = []
-    props.languages.forEach(lang => {
+    props.languages.lang.forEach(lang => {
         languages.push(<div className={styles.lang}>{lang}</div>)
     })
 
