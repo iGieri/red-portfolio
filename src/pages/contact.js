@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/Home.module.css'
 import Nav from "../components/Nav"
 import Form from "../components/Form"
