@@ -67,7 +67,7 @@
 }
 
 /* iPhone 8 */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .button {
         margin-left: 15%;
     }

@@ -48,8 +48,8 @@
 
 @media (max-width: 420px) {
     .container {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: -1rem;
+        margin-right: -1rem;
         margin-top: -1rem;
         margin-bottom: -1rem;
         transform: scale(.7);
