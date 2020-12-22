@@ -16,7 +16,7 @@ export default function Nav(props) {
                         <div className={styles.title}>{props.title}</div>
                     </div>
                 </Link>
-                <div className={styles.button}><Button>{props.button}</Button></div>  
+                <Link href="/contact"><div className={styles.button}><Button>{props.button}</Button></div></Link> 
             </Container>
         </div>
     )
