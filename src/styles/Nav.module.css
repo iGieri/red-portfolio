@@ -1,3 +1,8 @@
+.linkContainer {
+    display: inline;
+    cursor: pointer;
+}
+
 .img_container {
     display: inline-block;
 }
