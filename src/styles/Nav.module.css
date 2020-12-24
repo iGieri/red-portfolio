@@ -24,10 +24,9 @@
 }
 
 .button {
-    display: inline-block;
-    margin-left: 60%;
+    float: right;    
     position: relative;
-    top: 3px;
+    top: 1.25rem;
     cursor: pointer;
 }
 
