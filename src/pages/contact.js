@@ -29,7 +29,7 @@ export async function getStaticProps() {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': `Bearer 81c5da3ff178f4f897b924cab8ca84`,
+        'Authorization': `Bearer ${process.env.datocms_token}`,
       },
       body: JSON.stringify({
         query: `
@@ -40,7 +40,7 @@ export async function getStaticProps() {
               }
               title
             }
-          
+
             contactMe {
               contactMe {
                 title
@@ -48,7 +48,7 @@ export async function getStaticProps() {
                 terms
               }
             }
-          
+
             footer {
               icon {
                 url
@@ -61,7 +61,7 @@ export async function getStaticProps() {
               description
             }
           }
-        
+
         `
       }),
     }
@@ -70,8 +70,8 @@ export async function getStaticProps() {
   .catch((error) => {
     console.log(error);
   });
-  
- 
+
+
   console.log(data)
 
   return {
@@ -80,4 +80,3 @@ export async function getStaticProps() {
     }
   }
 }
-
