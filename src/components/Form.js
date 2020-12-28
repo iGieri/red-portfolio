@@ -8,8 +8,8 @@ import { SiteClient } from "datocms-client"
 
 
 async function sendData({name, surname, email, message}) {
-    const client = new SiteClient("9d1ca7dd5ed1a646c9057bc5a29d3d")
-    
+    const client = new SiteClient(process.env.datocms_token)
+
     if (name != "", surname != "", email != "", message != "") {
         await client.items.create({
             itemType: "471540",
